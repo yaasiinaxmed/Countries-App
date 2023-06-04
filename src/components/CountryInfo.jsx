@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Link, useParams } from 'react-router-dom';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 export default function Country() {
   
@@ -32,7 +33,7 @@ export default function Country() {
             loading.....
         </h1>
     ) : (
-     <section className='p-8 md:py-0 max-w-7xl mx-auto'>
+     <section className='mt-[70px] md:mt-0 p-8 md:py-0 max-w-7xl mx-auto'>
         <Navbar/>
      {country.map((item) => (
          <div key={item.population} className='grid grid-cols-1 gap-8 md:grid-cols-2 md:place-items-center md:h-screen'>
@@ -63,6 +64,7 @@ export default function Country() {
      ))}
     </section> 
     )}
+    <Footer/>
    </>
   
   )
