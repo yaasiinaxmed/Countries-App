@@ -11,10 +11,19 @@ body {
     @apply bg-gray-100 dark:bg-gray-900;
 }
 
-* {
-    /* transition: all 0.3s ease; */
+#scrollTop {
+    animation: scrollTop 0.3s forwards;
+    transition: background 0.3s forwards ease-in-out;
+    /* transform:translateY(-50) */
 }
 
-.dropblock {
-    display: block;
+@keyframes scrollTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px)
+    }
+    100% {
+        opacity: 100;
+        transform: translateY(0)
+    }
 }
